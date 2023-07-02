@@ -13,9 +13,9 @@ import {
   CardContent,
 } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
-import ListAltIcon from '@mui/icons-material/ListAlt';
+import LockOpenIcon from '@mui/icons-material/LockOpen'
 
-export default function App() {
+export default function TodoFrom() {
   const [showErrorMsgView, setShowErrorMsgView] = React.useState(false)
 
   const [email, setEmail] = React.useState('')
@@ -35,7 +35,7 @@ export default function App() {
         <Card>
           <CardContent>
             <Typography variant="h1" sx={{ fontSize: 20 }} gutterBottom>
-              <ListAltIcon /> Todo App
+              <LockOpenIcon /> Forgotten Password
             </Typography>
             <Collapse in={showErrorMsgView}>
               <Alert
@@ -60,7 +60,7 @@ export default function App() {
             <FormControl variant="standard" fullWidth>
               <TextField
                 id="userName"
-                label="Create Todo"
+                label="Email Address"
                 variant="standard"
                 fullWidth
                 sx={{mt:'10'}}
@@ -79,7 +79,7 @@ export default function App() {
                 addTodoList()
               }}
             >
-              Add Todo
+              Send
             </Button>
           </CardActions>
         </Card>
